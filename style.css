@@ -1,0 +1,105 @@
+body {
+    font-family:'Times New Roman', Times, serif;
+}
+
+.navback-bg {
+    background-color: green;
+}
+
+.site {
+    margin: 5px;
+}
+
+.site:hover {
+    background-color: darkgreen;
+    border-radius: 10px;
+}
+
+.custom-btn {
+    background-color: darkgreen;
+    color: white;
+    width: 150px;
+}
+
+.custom-btn:hover {
+    background-color: white;
+    color: darkgreen;
+    border: 1px solid darkgreen;
+}
+
+section{
+    background: url(pic/back.jpg) no-repeat;
+    background-size: cover;
+    height: calc(100vh - 80px);
+}
+
+.custom-h {
+    background-color: darkgreen;
+    color: white;
+    margin: 50px;
+    padding: 20px;
+}
+
+.pic-ds {
+    width: 200px;
+    border: 5px solid green;
+    border-radius: 10px;
+}
+
+.view-bg {
+    background-color: green;
+    color: white;
+    border-radius: 10px;
+    border: 1px solid white;
+}
+
+.view-bg:hover {
+    background-color: white;
+    color: green;
+    border: 1px solid green;
+    border-radius: 10px;
+}
+
+.pick-bg {
+    background-color: red;
+    color: white;
+    border-radius: 10px;
+    border: 1px solid white;
+}
+
+.pick-bg:hover {
+    background-color: white;
+    color: red;
+    border: 1px solid red;
+    border-radius: 10px;
+}
+
+.wid {
+    width: 70px;
+}
+
+.ft-size {
+    font-size: 15px;
+}
+
+
+.h-line {
+    width: 150px;
+    margin: 0 auto;
+    height: 1.7px;
+}
+
+.pic-dz {
+    width: 300px;
+    border: 5px solid green;
+    border-radius: 10px;
+}
+
+.acol {
+    color: black;
+    font-size: 20px;
+}
+
+.acol:hover {
+    color: darkgreen;
+}
