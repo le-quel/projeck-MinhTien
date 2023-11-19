@@ -1,3 +1,20 @@
+<?php
+if (isset($_SESSION["user"]) && count($_SESSION["user"]) > 0) {
+    extract($_SESSION["user"]);
+    $html_account = '
+            <li><a href="register">Xin chào, <span class="text-danger">' . $username . '</span></a></li>
+            <li><a href="index.php?page=profile&act=info">Thông Tin Cá Nhân</a></li>
+            <li><a href="index.php?page=order">Đơn Hàng</a></li>
+            <li><a href="index.php?page=changePassword">Đổi Mật Khẩu</a></li>
+            <li><a class="btn btn-danger p-2 text-white" href="index.php?page=logout">Đăng Xuất</a></li>
+        ';
+} else {
+    $html_account = '
+            <li><a href="index.php?page=register">Đăng Ký</a></li>
+            <li><a href="index.php?page=login">Đăng Nhập</a></li>
+        ';
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,27 +26,13 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <link rel="stylesheet" href="style.css">
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>PLANTS</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11.0.3/swiper-bundle.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="assets/owlcarousel/assets/owl.carousel.min.css">
-    <link rel="stylesheet" href="assets/owlcarousel/assets/owl.theme.default.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script src="assets/owlcarousel/owl.carousel.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <title>PLANTS</title>
 </head>
 
 <body>
     <nav class="navbar navbar-expand-lg navbar-light navback-bg">
         <div class="container-fluid">
-            <a class="navbar-brand text-white me-3 fw-bold fs-2" href="index.php">PLANTS</a>
+            <a class="navbar-brand text-white me-3 fw-bold fs-2" href="index.php?page=home">PLANTS</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation">
@@ -37,12 +40,12 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item site me-2">
-                        <a class="nav-link text-white fs-6" aria-current="page" href="index.php">TRANG CHỦ</a>
-                    </li>
+                    <!-- <li class="nav-item site me-2">
+                        <a class="nav-link text-white fs-6" aria-current="page" href="index.php?page=home">TRANG CHỦ</a>
+                    </li> -->
 
                     <li class="nav-item site me-2">
-                        <a class="nav-link text-white fs-6" href="about/php">GIỚI THIỆU</a>
+                        <a class="nav-link text-white fs-6" href="index.php?page=about">GIỚI THIỆU</a>
                     </li>
 
                     <li class="nav-item dropdown site me-2">
@@ -66,23 +69,26 @@
                     </li>
 
                     <li class="nav-item site me-2">
-                        <a class="nav-link text-white fs-6" href="contact.php">LIÊN HỆ</a>
+                        <a class="nav-link text-white fs-6" href="index.php?page=contact">LIÊN HỆ</a>
                     </li>
                 </ul>
                 <form class="d-flex">
                     <input class="form-control me-2" type="search" placeholder="Bạn đang tìm điều gì?"
                         aria-label="Search">
-                    <a href="index.php?page=cart" class="btn wid custom-btn me-2">
-                        <i class="bi bi-search"></i>
-                    </a>
                     <button class="btn wid custom-btn me-2" type="submit">
-                        <i class="bi bi-basket2"></i>
+                        <i class="bi bi-search"></i>
                     </button>
-                    <a href="index.php?page=register" class="btn wid custom-btn">
+
+
+                    <a class="btn wid custom-btn me-2" class="login" href="index.php?page=login">
                         <i class="bi bi-person-circle"></i>
                     </a>
-                </form>
 
+                    <a class="btn wid custom-btn me-2" class="login" href="index.php?page=cart">
+                        <i class="bi bi-basket2"></i>
+                    </a>
+
+                </form>
             </div>
         </div>
     </nav>

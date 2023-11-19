@@ -1,5 +1,5 @@
 body {
-    font-family:'Times New Roman', Times, serif;
+    font-family: 'Times New Roman', Times, serif;
 }
 
 .navback-bg {
@@ -27,7 +27,7 @@ body {
     border: 1px solid darkgreen;
 }
 
-section{
+section {
     background: url(pic/back.jpg) no-repeat;
     background-size: cover;
     height: calc(100vh - 80px);

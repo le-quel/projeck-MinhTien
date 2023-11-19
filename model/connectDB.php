@@ -6,7 +6,7 @@ function pdo_get_connection()
 {
     $dburl = "mysql:host=localhost;dbname=dbplant;charset=utf8";
     $username = 'root';
-    $password = 'Quel0832575905'; // đổi mk để truy cập
+    $password = ''; // đổi mk để truy cập
 
     $conn = new PDO($dburl, $username, $password);
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);

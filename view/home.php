@@ -1,107 +1,26 @@
 <br>
-<style>
-#container {
-    display: block !important;
-}
 
-.file {
-    display: block !important;
-}
-</style>
 <h2 class="text-center custom-h">SẢN PHẨM CỦA CHÚNG TÔI</h2>
 
 <br>
 
 <div class="container">
     <div class="row row-cols-1 row-cols-lg-4 g-5 g-lg-3 text-center">
+        <?php 
+        foreach ($product as $key => $product) { ?>
         <div class="col">
             <div class="p-3 border bg-light">
-                <img src="pic/mau2.jpg" alt="" class="pic-ds">
-                <p class="fw-bold fs-5 mt-3">HOA HƯỚNG DƯƠNG</p>
+                <img src="pic/<?php echo $product['image']?>" alt="" class="pic-ds">
+                <p class="fw-bold fs-5 mt-3"><?php echo $product['name']?></p>
                 <div class="d-flex justify-content-evenly mb-2 ft-size">
                     <a href="" class="nav-link view-bg">CHI TIẾT VỀ CÂY</a>
-                    <a href="" class="nav-link pick-bg">ĐẶT HÀNG</a>
+                    <a href="index.php?page=cart" class="nav-link pick-bg">ĐẶT HÀNG</a>
                 </div>
             </div>
         </div>
-
-        <div class="col">
-            <div class="p-3 border bg-light">
-                <img src="pic/mau2.jpg" alt="" class="pic-ds">
-                <p class="fw-bold fs-5 mt-3">HOA HƯỚNG DƯƠNG</p>
-                <div class="d-flex justify-content-evenly mb-2 ft-size">
-                    <a href="" class="nav-link view-bg">CHI TIẾT VỀ CÂY</a>
-                    <a href="" class="nav-link pick-bg">ĐẶT HÀNG</a>
-                </div>
-            </div>
-        </div>
-
-        <div class="col">
-            <div class="p-3 border bg-light">
-                <img src="pic/mau2.jpg" alt="" class="pic-ds">
-                <p class="fw-bold fs-5 mt-3">HOA HƯỚNG DƯƠNG</p>
-                <div class="d-flex justify-content-evenly mb-2 ft-size">
-                    <a href="" class="nav-link view-bg">CHI TIẾT VỀ CÂY</a>
-                    <a href="" class="nav-link pick-bg">ĐẶT HÀNG</a>
-                </div>
-            </div>
-        </div>
-
-        <div class="col">
-            <div class="p-3 border bg-light">
-                <img src="pic/mau2.jpg" alt="" class="pic-ds">
-                <p class="fw-bold fs-5 mt-3">HOA HƯỚNG DƯƠNG</p>
-                <div class="d-flex justify-content-evenly mb-2 ft-size">
-                    <a href="" class="nav-link view-bg">CHI TIẾT VỀ CÂY</a>
-                    <a href="" class="nav-link pick-bg">ĐẶT HÀNG</a>
-                </div>
-            </div>
-        </div>
-
-        <div class="col">
-            <div class="p-3 border bg-light">
-                <img src="pic/mau2.jpg" alt="" class="pic-ds">
-                <p class="fw-bold fs-5 mt-3">HOA HƯỚNG DƯƠNG</p>
-                <div class="d-flex justify-content-evenly mb-2 ft-size">
-                    <a href="" class="nav-link view-bg">CHI TIẾT VỀ CÂY</a>
-                    <a href="" class="nav-link pick-bg">ĐẶT HÀNG</a>
-                </div>
-            </div>
-        </div>
-
-        <div class="col">
-            <div class="p-3 border bg-light">
-                <img src="pic/mau2.jpg" alt="" class="pic-ds">
-                <p class="fw-bold fs-5 mt-3">HOA HƯỚNG DƯƠNG</p>
-                <div class="d-flex justify-content-evenly mb-2 ft-size">
-                    <a href="" class="nav-link view-bg">CHI TIẾT VỀ CÂY</a>
-                    <a href="" class="nav-link pick-bg">ĐẶT HÀNG</a>
-                </div>
-            </div>
-        </div>
+        <?php  }  ?>
 
 
-        <div class="col">
-            <div class="p-3 border bg-light">
-                <img src="pic/mau2.jpg" alt="" class="pic-ds">
-                <p class="fw-bold fs-5 mt-3">HOA HƯỚNG DƯƠNG</p>
-                <div class="d-flex justify-content-evenly mb-2 ft-size">
-                    <a href="" class="nav-link view-bg">CHI TIẾT VỀ CÂY</a>
-                    <a href="" class="nav-link pick-bg">ĐẶT HÀNG</a>
-                </div>
-            </div>
-        </div>
-
-        <div class="col">
-            <div class="p-3 border bg-light">
-                <img src="pic/mau2.jpg" alt="" class="pic-ds">
-                <p class="fw-bold fs-5 mt-3">HOA HƯỚNG DƯƠNG</p>
-                <div class="d-flex justify-content-evenly mb-2 ft-size">
-                    <a href="" class="nav-link view-bg">CHI TIẾT VỀ CÂY</a>
-                    <a href="" class="nav-link pick-bg">ĐẶT HÀNG</a>
-                </div>
-            </div>
-        </div>
     </div>
 </div>
 
